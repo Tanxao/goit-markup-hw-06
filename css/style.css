@@ -161,8 +161,8 @@ address {
 
 .hero {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-bgr.jpg);
-    padding-top: 72px;
-    padding-bottom: 72px;
+    width: 100%;
+    padding: 72px 0;
     max-width: 320px;
     background-repeat: no-repeat;
     background-position: center;
@@ -181,6 +181,7 @@ address {
     margin-bottom: 72px;
     margin-left: auto;
     margin-right: auto;
+    text-transform: capitalize;
 }
 
 .hero-btn {
@@ -235,16 +236,8 @@ address {
     max-width: 288px
 }
 
-.section-two-icon {
-    display: flex;
+.section-two-icon-svg {
     display: none;
-    align-items: center;
-    justify-content: center;
-    height: 112px;
-    background-color: #f4f4fd;
-    border-radius: 4px;
-    margin-bottom: 8px;
-    border: 1px solid var(--LIGHT-SLATE, #8E8F99);
 }
 
 .section-two-title {
@@ -269,7 +262,7 @@ address {
 
 .team {
     background-color: #F4F4FD;
-    padding: 120px 0;
+    padding: 96px 0;
 }
 
 .team-title {
@@ -285,17 +278,22 @@ address {
 
 .team-list {
     display: flex;
-    gap: 24px;
+    flex-wrap: wrap;
+    gap: 72px;
+    margin-left: 13px;
+    margin-right: 13px;
 }
 
 .team-item {
     background-color: #FFFFFF;
-    width: calc((100% - 72px) / 4);
+    width: 100%;
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
-.team-item-img {}
+.team-item-img {
+    width: 100%;
+}
 
 .team-item-container {
     padding: 32px 0;
@@ -318,7 +316,6 @@ address {
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    padding-bottom: 8px;
 }
 
 .team-item {}
@@ -334,6 +331,7 @@ address {
 .item-icon {
     width: 40px;
     height: 40px;
+    margin-top: 8px;
 }
 
 .link-icon {
@@ -357,8 +355,7 @@ address {
 }
 
 .portfolio {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding: 92px 0;
 }
 
 .portfolio-title {
@@ -380,7 +377,6 @@ address {
 }
 
 .portfolio-list-item {
-    width: calc((100% - 48px) / 3);
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
@@ -410,7 +406,9 @@ address {
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-item-img {}
+.portfolio-item-img {
+    width: 100%;
+}
 
 .portfolio-item-container {
     padding: 32px 16px;
@@ -439,11 +437,23 @@ address {
 
 .footer {
     background-color: #2e2f42;
-    padding: 100px 0;
+    padding: 96px 0;
+}
+
+.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
 }
 
 .footer-container-logo {
-    margin-right: 120px;
+    margin: 0 auto;
 }
 
 .footer-logo {
@@ -455,7 +465,10 @@ address {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     display: inline-block;
-    margin-bottom: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 17px;
 }
 
 .footer-logo-aside {
@@ -469,14 +482,12 @@ address {
     line-height: 1.5;
     letter-spacing: 0.02em;
     max-width: 264px;
+    margin-bottom: 72px;
 }
 
-.footer-container{
-    display: flex;
-    align-items: baseline;
+.contacts-container {
+    margin: 0 auto;
 }
-
-.contacts-container {}
 
 .contacts-text {
     color: var(--WHITE, #FFF);
@@ -485,11 +496,15 @@ address {
     line-height: 1.5;
     letter-spacing: 0.02em;
     margin-bottom: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .contacts-list {
     display: flex;
     gap: 16px;
+    margin-bottom: 72px;
 }
 
 .contacts-item {
@@ -518,7 +533,6 @@ address {
 }
 
 .post-block {
-    margin-left: 80px;
 }
 
 .post-block-text {
@@ -528,17 +542,21 @@ address {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .post-block-imail {
     display: flex;
     gap: 24px;
+    flex-wrap: wrap;
 }
 
 .post-block-imeil-item {}
 
 .post-block-imail-item-text {
-    width: 264px;
+    width: 288px;
     height: 40px;
     border: 1px solid #ffffff;
     background-color: transparent;
@@ -569,7 +587,8 @@ address {
     background-color: #4D5AE5;
     border: none;
     border-radius: 4px;
- }
+    margin: 0 auto;
+}
 
 .post-icon {
     margin-left: 16px;
@@ -592,7 +611,7 @@ address {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
-    width: 408px;
+    width: 288px;
     min-height: 584px;
     background: #fcfcfc;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -779,13 +798,28 @@ address {
 @media screen and (min-width: 768px) {
     .container {
         min-width: 768px;
-        padding-right: 16px;
-        padding-left: 16px;
+    }
+
+    .header-address {
+        margin: 16px 0;
+    }
+
+    .header-address-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: end;
+
+    }
+
+    .header-address-item {}
+
+    .header-address-link {
+        padding: 0;
     }
 
     .hero {
-        padding-top: 112px;
-        padding-bottom: 112px;
+        padding: 112px 0;
         max-width: 768px;
     }
 
@@ -794,15 +828,72 @@ address {
         margin-bottom: 36px;
         font-size: 56px;
         line-height: 1.07;
+        text-transform: none;
+    }
+
+    .section-two-list {
+        gap: 72px 24px;
     }
 
     .section-two-item {
-    max-width: 356px
-    width: calc((100% - 72px) / 2);
+        max-width: 356px;
+        width: calc((100% - 24px) / 2);
     }
 
     .section-two-title {
-        text-align: justify;
+        text-align: left;
+    }
+
+    .team {
+    }
+
+    .team-list {
+        gap: 64px 24px;
+    }
+
+    .team-item {
+        width: calc((100% - 24px) / 2);
+    }
+
+    .portfolio-list {
+        row-gap: 72px;
+    }
+
+    .portfolio-list-item {
+        width: calc((100% - 24px) / 2);
+    }
+
+    .footer-container {
+        padding-left: 108px;
+    }
+
+    .footer-container-logo {
+        margin: 0;
+        padding-right: 24px;
+    }
+
+    .footer-logo {
+        justify-content: left;
+    }
+
+    .contacts-container {
+        margin: 0;
+    }
+
+    .contacts-text {
+        justify-content:left;
+    }
+
+    .post-block-text {
+        justify-content: left;
+    }
+
+    .post-block-imail-item-text {
+        width: 264px;
+    }
+
+    .body-vicno {
+        width: 408px;
     }
 }
 
@@ -813,16 +904,133 @@ address {
         padding-left: 15px;
     }
 
+    .header-address {
+        margin: 0;
+        margin-left: auto;
+    }
+    
+    .header-address-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        justify-content: none;
+    
+    }
+    
+    .header-address-item {
+        padding: 24px 0;
+    }
+    
+    .header-address-link {
+        padding: 0;
+    }
+
     .hero {
-        padding-top: 188px;
-        padding-bottom: 188px;
-        max-width: 1158px;
+        max-width: 1440px;
+        padding: 188px 0;
     }
 
     .hero-title {
-        max-width: 496px;
         margin-bottom: 48px;
         font-size: 56px;
         line-height: 1.07;
+    }
+
+    .section-two {
+        padding: 120px 0;
+    }
+
+    .section-two-item {
+        max-width: 264px;
+        width: calc((100% - 72px) / 4);
+    }
+
+    .section-two-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 112px;
+        background-color: #f4f4fd;
+        border-radius: 4px;
+        margin-bottom: 8px;
+        border: 1px solid var(--LIGHT-SLATE, #8E8F99);
+    }
+
+    .section-two-icon-svg {
+        display: block;
+    }
+        
+    .section-two-title {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.20;
+        letter-spacing: 0.02em;
+        text-align: justify;
+    }
+
+    .section-two-text {
+        font-weight: 400;
+    }
+
+    .team {
+        padding: 120px 0;
+    }
+    
+    .team-item {
+        width: calc((100% - 72px) / 4);
+    }
+
+    .portfolio {
+        padding: 120px 0;
+    }
+
+    .portfolio-list {
+        row-gap: 48px;
+    }
+
+    .portfolio-list-item {
+        width: calc((100% - 48px) / 3);
+    }
+
+    .footer {
+        padding: 101px 0;
+    }
+
+    .footer-container {
+        padding-left: 0;
+    }
+        
+    .footer-container-logo {
+        margin: 0;
+        padding-right: 120px;
+    }
+        
+    .footer-logo {
+        justify-content: left;
+    }
+
+    .footer-text {
+        margin-bottom: 0;
+    }
+        
+    .contacts-container {
+        margin: 0;
+    }
+        
+    .contacts-text {
+        justify-content: left;
+    }
+
+    .contacts-list {
+        margin-bottom: 0;
+        margin-right: 80px;
+    }
+        
+    .post-block-text {
+        justify-content: left;
+    }
+        
+    .post-block-imail-item-text {
+        width: 264px;
     }
 }
