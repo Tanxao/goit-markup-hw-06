@@ -308,7 +308,11 @@ address {
 .main {}
 
 .hero {
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-bgr.jpg);
+    background-image: linear-gradient(
+    rgba(46, 47, 66, 0.7),
+    rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/hero-bg-tab.jpg);
     width: 100%;
     padding: 72px 0;
     max-width: 320px;
@@ -316,6 +320,18 @@ address {
     background-position: center;
     background-size: cover;
     margin: auto;
+}
+
+@media screen and (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+    .hero {
+        background-image: linear-gradient(
+            rgba(46, 47, 66, 0.7),
+            rgba(46, 47, 66, 0.7)
+            ),
+            url(../images/hero-bg-tab-2x.jpg);
+    }
 }
 
 .hero-title {
@@ -980,8 +996,23 @@ address {
     }
 
     .hero {
+        background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/hero-bg-mod.jpg);
         padding: 112px 0;
         max-width: 768px;
+    } 
+
+    @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .hero {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                    rgba(46, 47, 66, 0.7)),
+                url(../images/hero-bg-mod-2x.jpg);
+        }
     }
 
     .hero-title {
@@ -1087,8 +1118,25 @@ address {
     }
 
     .hero {
+        background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/hero-bg.jpg);
         max-width: 1440px;
         padding: 188px 0;
+    }
+    
+    @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .hero {
+            background-image: linear-gradient(
+            rgba(46, 47, 66, 0.7),             
+            rgba(46, 47, 66, 0.7)
+            ),
+            url(../images/hero-bg-2x.jpg);
+        }
     }
 
     .hero-title {
