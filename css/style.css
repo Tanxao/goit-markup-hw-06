@@ -172,14 +172,13 @@ address {
 }
 
 .mod-mein {
-    /*
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1;
     width: 100%;
     height: 100%;
-    background-color: #1e1823;
+    background-color: #FFF;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -188,27 +187,34 @@ address {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    */
 }
 
 .mod-btn {
-    display: block;
-    margin-left: auto;
-    stroke-width: 1px;
-    border: 1px solid #2E2F42;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
-    margin-top: 24px;
-    margin-bottom: 24px;
-    margin-right: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e7e9fc;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.mod-btn-icon {
+.mod-btn-icon:hover,
+.mod-btn-icon:focus {
+    background-color: #404bbf;
 }
 
 .mod-nav-list {
     margin-left: 16px;
+    margin-top: 72px;
     margin-bottom: 168px;
-
 }
 
 .mod-nav-item {
@@ -252,7 +258,6 @@ address {
     font-style: normal;
     font-weight: 500;
     line-height: 1.20;
-    /* 120% */
     letter-spacing: 0.02em;
 }
 
@@ -261,13 +266,44 @@ address {
     color: #404bbf;
 }
 
-.mod-list-icon {}
+.mod-list-icon {
+    display: flex;
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 40px;
+    margin-left: 16px;
+    margin-top: 56px;
+    margin-bottom: 40px;
+}
 
-.mod-item-icon {}
+.mod-item-icon {
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    width: calc((100% - 40px) / 3);
+}
 
-.mod-link-icon {}
+.mod-link-icon {
+    width: 100%;
+    height: 100%;
+    background-color: #4D5AE5;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-.mod-team-link-icon {}
+.mod-link-icon:hover,
+.mod-link-icon:focus {
+    background-color: #31D0AA;
+}
+
+.mod-team-link-icon {
+    fill: #F4F4FD;
+    margin: 8px;
+}
+
 
 .main {}
 
@@ -552,12 +588,6 @@ address {
     padding: 96px 0;
 }
 
-.is-open {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-}
-
 .footer-container {
     display: flex;
     flex-wrap: wrap;
@@ -716,6 +746,12 @@ address {
     height: 100%;
     background-color: var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.40));
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
 }
 
 .body-vicno {
@@ -937,6 +973,10 @@ address {
 
     .header-address-link {
         padding: 0;
+    }
+
+    .header-icon {
+        display: none;
     }
 
     .hero {
