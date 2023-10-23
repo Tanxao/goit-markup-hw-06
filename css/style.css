@@ -63,7 +63,7 @@ address {
     line-height: 1.17;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    margin-right: 76px
+    margin-right: 76px;
 }
 
 .header-logo-aside {
@@ -89,6 +89,7 @@ address {
     padding-bottom: 24px;
     position: relative;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: none;
 }
 
 .header-nav-link-dudlicate {
@@ -130,6 +131,7 @@ address {
 
 .header-address {
     margin-left: auto;
+    display: none;
 }
 
 .header-address-list {
@@ -137,8 +139,7 @@ address {
     gap: 40px;
 }
 
-.header-address-item {
-}
+.header-address-item {}
 
 .header-address-link {
     color: var(--SLATE, #434455);
@@ -156,6 +157,117 @@ address {
 .header-address-link:focus {
     color: #404bbf;
 }
+
+.header-icon {
+    padding-top: 16px;
+    padding-right: 16px;
+    padding-bottom: 16px;
+}
+
+.header-icon-btn {
+    display: flex;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+.mod-mein {
+    /*
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: #1e1823;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: auto;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    */
+}
+
+.mod-btn {
+    display: block;
+    margin-left: auto;
+    stroke-width: 1px;
+    border: 1px solid #2E2F42;
+    border-radius: 50%;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    margin-right: 24px;
+}
+
+.mod-btn-icon {
+}
+
+.mod-nav-list {
+    margin-left: 16px;
+    margin-bottom: 168px;
+
+}
+
+.mod-nav-item {
+    padding-bottom: 40px;
+}
+
+.mod-nav-link {
+    color: #2E2F42;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+}
+
+.mod-nav-link:hover,
+.mod-nav-link:focus {
+    color: #404bbf;
+}
+
+.header-nav-link-dublicate {}
+
+.mod-nav-link {
+
+}
+
+.mod-address {
+    margin-left: 16px;
+}
+
+.mod-address-list {}
+
+.mod-address-item {
+    padding-bottom: 24px;
+}
+
+.mod-address-link {
+    color: #434455;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.20;
+    /* 120% */
+    letter-spacing: 0.02em;
+}
+
+.mod-address-link:hover,
+.mod-address-link:focus {
+    color: #404bbf;
+}
+
+.mod-list-icon {}
+
+.mod-item-icon {}
+
+.mod-link-icon {}
+
+.mod-team-link-icon {}
 
 .main {}
 
@@ -800,8 +912,17 @@ address {
         min-width: 768px;
     }
 
+    .header-logo {
+        padding: 0;
+    }
+
+    .header-nav-link {
+        display: block;
+    }
+
     .header-address {
         margin: 16px 0;
+        display: block;
     }
 
     .header-address-list {
