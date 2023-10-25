@@ -292,7 +292,7 @@ address {
     rgba(46, 47, 66, 0.7),
     rgba(46, 47, 66, 0.7)
     ),
-    url(../images/hero-bg-tab.jpg);
+    url(../images/hero-bg-mod.jpg);
     width: 100%;
     padding: 72px 0;
     max-width: 320px;
@@ -310,7 +310,7 @@ address {
             rgba(46, 47, 66, 0.7),
             rgba(46, 47, 66, 0.7)
             ),
-            url(../images/hero-bg-tab-2x.jpg);
+            url(../images/hero-bg-mod-2x.jpg);
     }
 }
 
@@ -956,7 +956,7 @@ address {
 
     .header-address {
         display: block;
-        margin: 0;
+        margin: auto;
     }
 
     .header-address-list {
@@ -979,7 +979,7 @@ address {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
         ),
-        url(../images/hero-bg-mod.jpg);
+        url(../images/hero-bg-tab.jpg);
         padding: 112px 0;
         max-width: 768px;
     } 
@@ -990,7 +990,7 @@ address {
         .hero {
             background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                     rgba(46, 47, 66, 0.7)),
-                url(../images/hero-bg-mod-2x.jpg);
+                url(../images/hero-bg-tab-2x.jpg);
         }
     }
 
